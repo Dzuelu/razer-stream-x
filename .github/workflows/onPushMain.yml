@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  CI: true
+
+jobs:
+  # TODO fix and then add tests run before deploy
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install -g yarn
+        shell: sh
+
+      - name: Setup GIT
+        run: |
+          git config --local user.email "github-actions@users.noreply.github.com"
+          git config --local user.name "github-actions"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        shell: sh
+
+      - run: yarn install
+        shell: sh
+
+      - run: yarn lint
+        shell: sh
+
+      - run: yarn test
+        shell: sh
+
+      - run: yarn build
+        shell: sh
+
+      - run: yarn deploy
+        shell: sh
