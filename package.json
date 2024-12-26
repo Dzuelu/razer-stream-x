@@ -45,10 +45,11 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.tsx .",
+    "test": "jest --passWithNoTests",
     "make": "electron-forge make",
     "package": "electron-forge package",
     "publish": "electron-forge publish",
     "start": "electron-forge start"
   },
-  "version": "5.0.0"
+  "version": "1.0.0"
 }

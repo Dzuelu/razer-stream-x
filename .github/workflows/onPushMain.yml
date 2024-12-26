@@ -43,8 +43,8 @@ jobs:
       - run: yarn test
         shell: sh
 
-      - run: yarn build
-        shell: sh
+      # - run: yarn build
+      #   shell: sh
 
-      - run: yarn deploy
-        shell: sh
+      # - run: yarn deploy
+      #   shell: sh

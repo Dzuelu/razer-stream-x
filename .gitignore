@@ -11,8 +11,9 @@
 !*.sh
 !*.ts
 !*.tsx
+!*.yml
 !yarn.lock
-!/static/*.*
+!/public/*.*
 
 # Always ignore
 node_modules
