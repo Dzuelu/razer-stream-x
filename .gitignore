@@ -4,14 +4,12 @@
 
 # Don't ignore
 !.gitignore
+!*.html
 !*.js
 !*.json
 !*.md
 !*.sh
 !*.ts
-!*.yml
-!Dockerfile
-!eslint-config
 !yarn.lock
 
 # Always ignore
