@@ -10,7 +10,9 @@
 !*.md
 !*.sh
 !*.ts
+!*.tsx
 !yarn.lock
+!/static/*.*
 
 # Always ignore
 node_modules

@@ -6,7 +6,9 @@
   "dependencies": {
     "canvas": "^3.0.0",
     "electron-squirrel-startup": "^1.0.1",
-    "loupedeck": "^6.0.1"
+    "loupedeck": "^6.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -22,6 +24,8 @@
     "@electron-forge/plugin-webpack": "^7.6.0",
     "@electron/fuses": "^1.8.0",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "babel-loader": "^9.2.1",
     "css-loader": "^6.0.0",
     "dzuelu-eslint-config": "^1.0.3",
